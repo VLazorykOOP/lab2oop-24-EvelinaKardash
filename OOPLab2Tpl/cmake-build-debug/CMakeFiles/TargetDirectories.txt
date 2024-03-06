@@ -1,0 +1,3 @@
+/Users/eveline/CLionProjects/Lab/lab2oop-24-EvelinaKardash/OOPLab2Tpl/cmake-build-debug/CMakeFiles/untitled.dir
+/Users/eveline/CLionProjects/Lab/lab2oop-24-EvelinaKardash/OOPLab2Tpl/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/eveline/CLionProjects/Lab/lab2oop-24-EvelinaKardash/OOPLab2Tpl/cmake-build-debug/CMakeFiles/rebuild_cache.dir
