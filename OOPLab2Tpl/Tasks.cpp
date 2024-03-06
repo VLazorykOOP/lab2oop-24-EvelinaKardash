@@ -13,9 +13,15 @@ void MenuTask()
     cout << "    6.  Exit \n";
 }
 void task1() {
-    // Обчислення виразів з використанням побітових операцій
-    // Calculation of expressions using bitwise operations 
+
     cout << " Calculation of expressions using bitwise operations  \n";
+
+    int a, b, c, d;
+    cout<<" input a, b, c, d "<<" \n ";
+    cin>>a>>b>>c>>d;
+    a= ((((a<<4)+a)+((c << 8)+(c<<5)+(c<<4)+(c<<3)))/32)-((b<<6)+(b<<5)+(b<<4)+((b<<3))+(d<<7)-d);
+    cout<< a << "a= " << b << "b= " << c << "c= " << d <<"d= " << endl;
+
 }
 
 void task2()
@@ -40,5 +46,7 @@ void task4()
     cout << " Data encryption using structures with bit fields \n";
 
 }
+
+
 
 

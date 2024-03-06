@@ -7,10 +7,9 @@ using namespace std;
 #include "Examples.h"
 
 
-/// @brief 
-/// @return 
-int main()
-{
+/// @brief
+/// @return
+int main(){
     cout << "OOP. Template for laboratory work #2.\n";
 
     char ch = '5';
@@ -18,7 +17,7 @@ int main()
         system("cls");
         MenuTask();
         ch = cin.get();
-        
+
         cin.get();
 
         switch (ch) {
@@ -32,6 +31,7 @@ int main()
         cout << " Press any key and enter\n";
         ch = cin.get();
     } while (ch != '6');
+
 
     return 0;
 }
