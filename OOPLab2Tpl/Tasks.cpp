@@ -20,15 +20,16 @@ void task1() {
     cout<<" input a, b, c, d "<<" \n ";
     cin>>a>>b>>c>>d;
     a= ((((a<<4)+a)+((c << 8)+(c<<5)+(c<<4)+(c<<3)))/32)-((b<<6)+(b<<5)+(b<<4)+((b<<3))+(d<<7)-d);
-    cout<< a << "a " << b << "b " << c << "c " << d <<"d " << endl;
+    cout<< a << "=a " << b << "=b " << c << "=c " << d <<"=d " << endl;
 
 }
 
 void task2()
 {
-    // Шифрування даних з використання побітових операцій 
-    // Data encryption using bitwise operations
     cout << " Data encryption using bitwise operations  \n";
+
+    char input[128];
+
 
 }
 
