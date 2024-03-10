@@ -62,19 +62,36 @@ void task2() {
     cout << "Text encrypted and saved to file: " << outputFileName << endl;
 }
 
-
 void task3() {
     cout << "  Data encryption using structures with bit fields \n";
 
+    string inputFileName = "encrypted_outb.bin"; // зчитує із файлу інформацію
+    cout << "Decrypted text from file " << inputFileName << ":" << endl; // виводить інформацію
 
-
+    ifstream inputFile(inputFileName, ios::in | ios::binary);
+    if (!inputFile) { // зчитування даних з файлу.
+        cerr << "Error: Unable to open input file." << endl;
+        return;
+    }
+    int decodedValue; // зчитує байти з файлу і зберігає їх у пам'яті вказівника
+    while (inputFile.read(reinterpret_cast<char *>(&decodedValue), sizeof(decodedValue))) {
+        int position = (decodedValue >> 9) & 0x7F; // витягуються дані
+        int asciiCode = (decodedValue >> 1) & 0xFF;
+        int parityBit = decodedValue & 1;
+        int calculatedParityBit = (position ^ asciiCode) & 1; // обчислюється біт парності для перевірки
+        if (parityBit != calculatedParityBit) {
+            cerr << "Error: Parity bit mismatch. Skipping character." << endl;
+            continue;
+        }
+        char decryptedChar = static_cast<char>(asciiCode); //конвертується з ASCII-коду у символ і виводиться на екран.
+        cout << decryptedChar;
+    }
+    inputFile.close();
+    return;
 }
 
-
-void task4() {   // Задача із використання побітових операцій
-    // The problem of using bitwise operations
+void task4() {
     cout << " Data encryption using structures with bit fields \n";
-
 }
 
 
