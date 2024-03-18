@@ -33,6 +33,7 @@ void task2() {
     cout << " Data encryption using bitwise operations  \n";
 
     string input;
+    cin.get();
     cout << "Enter text (up to 128 characters): "; // виведення тексту
     getline(cin, input); // зчитує рядок який ввели
     string outputFileName = "outb.bin"; // ім'я файлу у який записується текст
@@ -58,14 +59,14 @@ void task2() {
                          sizeof(encodedValue)); // записується це все в файл
     }
     outputFile.close();
-
     cout << "Text encrypted and saved to file: " << outputFileName << endl;
+    return;
 }
 
 void task3() {
-    cout << "  Data encryption using structures with bit fields \n";
+    cout << " Data encryption using structures with bit fields \n";
 
-    string inputFileName = "encrypted_outb.bin"; // зчитує із файлу інформацію
+    string inputFileName = "outb.bin"; // зчитує із файлу інформацію
     cout << "Decrypted text from file " << inputFileName << ":" << endl; // виводить інформацію
 
     ifstream inputFile(inputFileName, ios::in | ios::binary);
