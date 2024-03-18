@@ -22,9 +22,13 @@ void task1() {
 
     int a, b, c, d;
     cout << " input a, b, c, d " << " \n ";
+    cout << "((17*a+312*c)/32)-b*120+d*127 :\n";
     cin >> a >> b >> c >> d;
     a = ((((a << 4) + a) + ((c << 8) + (c << 5) + (c << 4) + (c << 3))) / 32) -
         ((b << 6) + (b << 5) + (b << 4) + ((b << 3)) + (d << 7) - d);
+    cout << a << "=a " << b << "=b " << c << "=c " << d << "=d " << endl;
+    cout << "Check example :\n";
+    ((17 * a + 312 * c) / 32) - b * 120 + d * 127;
     cout << a << "=a " << b << "=b " << c << "=c " << d << "=d " << endl;
 
 }
